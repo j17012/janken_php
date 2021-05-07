@@ -1,17 +1,15 @@
 <?php
     // コマンドライン引数を取得
-    $numStr = $argv[1];
+    $myHand = $argv[1];
 
     $comHand = "0";
     
     // 入力された値を判定する
-    numJudg($numStr);
-
-    $myHand = $numStr;
+    numJudg($myHand);
 
     echo $myHand . "\n";
     echo $comHand . "\n";
-    // 勝敗判定
+    // 勝敗判定s
     // if
     /*
     if(strcmp($myHand, $comHand) == 0){
@@ -37,10 +35,10 @@
     }
 
     # エラー処理(0^2以外が入力された場合)
-    function numJudg($numStr){
+    function numJudg($myHand){
         try{
-            # $numStrが2より大きいor0より小さい場合、例外を投げる
-            if($numStr > 2 || $numStr < 0){
+            # $myHandが2より大きいor0より小さい場合、例外を投げる
+            if($myHand > 2 || $myHand < 0){
                 throw new Exception();
             }
         }catch(Exception $e){
