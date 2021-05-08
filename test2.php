@@ -3,13 +3,14 @@
     $myHand = $argv[1];
 
     $comHand = "0";
-    
+
     // 入力された値を判定する
     numJudg($myHand);
 
     echo $myHand . "\n";
     echo $comHand . "\n";
-    // 勝敗判定s
+
+    // 勝敗判定
     // if
     /*
     if(strcmp($myHand, $comHand) == 0){
@@ -37,8 +38,8 @@
     # エラー処理(0^2以外が入力された場合)
     function numJudg($myHand){
         try{
-            # $myHandが2より大きいor0より小さい場合、例外を投げる
-            if($myHand > 2 || $myHand < 0){
+            # $numStrが2より大きい,0より小さい,値が入力されなかった場合、例外を投げる
+            if($myHand > 2 || $myHand < 0 || empty($numStr) == true){
                 throw new Exception();
             }
         }catch(Exception $e){

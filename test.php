@@ -42,8 +42,8 @@
      # エラー処理(0~2以外が入力された場合)
      function numJudg($numStr){
         try{
-            # $numStrが2より大きい,0より小さい場合、例外を投げる
-            if($numStr > 2 || $numStr < 0){
+            # $numStrが2より大きい,0より小さい,値が入力されなかった場合、例外を投げる
+            if($numStr > 2 || $numStr < 0 || empty($numStr) == true){
                 throw new Exception();
             }
         }catch(Exception $e){
